@@ -18,11 +18,11 @@ func main() {
   fmt.Scan(&currentfloor)
   //for each floor it takes 1 seconds to travel between each one
   floordif = math.Abs(currentfloor - elevatorfloor)
-  traveltime = floordif * 1
+  traveltime = floordif * 1 //traveltime tells the person how long the elevator takes to get there
   fmt.Println("The elevator will get to you in", traveltime,"seconds.")
-  if elevatorfloor > currentfloor {
-    for floordif > 0 {
-      time.Sleep(1 * time.Second)
+  if elevatorfloor > currentfloor { //if the elevator's floor is greater than the current floor of the person
+    for floordif > 0 { //keep doing this for loop until the difference between floors is 0
+      time.Sleep(1 * time.Second) //can change the 
       fmt.Println(elevatorfloor)
       elevatorfloor--
       floordif--
